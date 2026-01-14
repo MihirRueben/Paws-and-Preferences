@@ -13,7 +13,7 @@ export const fetchCats = async (limit = 15) => {
             url: `https://cataas.com/cat/${cat.id}`,
         }));
     } catch (error){
-        console.error("Error while getting cat data:", error);
+        console.error("Error while fetching data:", error);
         return [];
     }
 
