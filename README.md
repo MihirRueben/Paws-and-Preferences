@@ -25,7 +25,9 @@ A sleek, mobile-responsive **Tinder-style swiping application** for cat lovers. 
    git clone [https://github.com/MihirRueben/paws-and-preferences.git](https://github.com/MihirRueben/paws-and-preferences.git)
 
 2. **Install dependencies**
-   ```npm install
+    ```bash
+   npm install
 
-3. **Run the development**
-   ```npm run dev
+4. **Run the development**
+   ```bash
+   npm run dev
