@@ -1,16 +1,31 @@
-# React + Vite
+# 🐾 Paws & Preference
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, mobile-responsive **Tinder-style swiping application** for cat lovers. Built with React and Framer Motion, this app allows users to swipe through a deck of adorable kittens fetched in real-time from the Cataas API, save their favorites, and view a summary of their "likes" at the end.
 
-Currently, two official plugins are available:
+---
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+* **Dynamic Card Stack:** Smooth, physics-based swiping gestures (Left to skip, Right to like).
+* **Real-time API Integration:** Dynamically fetches kitten data and images from the Cataas (Cats as a Service) API.
+* **Smart Summary:** Tracks user preferences and displays a gallery of "liked" cats at the end of the session.
+* **Mobile Optimized:** Implemented `touch-none` gestures to ensure a native app-like experience on smartphones.
 
-## React Compiler
+## 🛠️ Tech Stack
+* **React 18** - UI Component logic and state management.
+* **Vite** - Lightning-fast build tool and development server.
+* **Tailwind CSS v4** - Modern, utility-first styling with the brand-new CSS-first configuration.
+* **Framer Motion** - Powerful animation library used for card gestures, rotations, and transitions.
+* **Cataas API** - The source of all kitten imagery and metadata.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Installation & Setup
 
-## Expanding the ESLint configuration
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/MihirRueben/paws-and-preferences.git](https://github.com/MihirRueben/paws-and-preferences.git)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. **Install dependencies**
+   ```npm install
+
+3. **Run the development**
+   ```npm run dev
