@@ -67,7 +67,8 @@ const CatCard = ({ cat, onSwipe, isTopCard }) => {
           whileTap={{ scale: 0.9 }}
           onClick={() => handleButtonClick('left')}
           disabled={!isTopCard}
-          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-red-500 hover:bg-red-600 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          style={{ backgroundColor: '#ef4444' }}
+          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 hover:bg-red-600 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <X size={20} sm={24} md={28} strokeWidth={3} />
         </motion.button>
@@ -78,7 +79,8 @@ const CatCard = ({ cat, onSwipe, isTopCard }) => {
           whileTap={{ scale: 0.9 }}
           onClick={() => handleButtonClick('right')}
           disabled={!isTopCard}
-          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          style={{ backgroundColor: '#22c55e' }}
+          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Heart size={20} sm={24} md={28} strokeWidth={3} fill="currentColor" />
         </motion.button>
