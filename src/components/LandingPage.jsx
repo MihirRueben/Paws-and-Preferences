@@ -18,7 +18,7 @@ const LandingPage = ({ onStartApp }) => {
           }}
           className="absolute top-12 sm:top-16 md:top-20 left-4 sm:left-6 md:left-10 text-pink-200 opacity-40 sm:opacity-50"
         >
-          <PawPrint size={40} sm={50} md={60} />
+          <PawPrint className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14" />
         </motion.div>
         <motion.div
           animate={{
@@ -33,7 +33,7 @@ const LandingPage = ({ onStartApp }) => {
           }}
           className="absolute bottom-12 sm:bottom-16 md:bottom-20 right-4 sm:right-6 md:right-10 text-blue-200 opacity-40 sm:opacity-50"
         >
-          <Heart size={35} sm={45} md={50} />
+          <Heart className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
         </motion.div>
         <motion.div
           animate={{
@@ -48,7 +48,7 @@ const LandingPage = ({ onStartApp }) => {
           }}
           className="absolute top-1/3 sm:top-1/2 left-1/5 sm:left-1/4 text-purple-200 opacity-30 sm:opacity-50 hidden xs:block"
         >
-          <PawPrint size={30} sm={35} md={40} />
+          <PawPrint className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />
         </motion.div>
       </div>
 
@@ -64,10 +64,10 @@ const LandingPage = ({ onStartApp }) => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-          className="mb-4 sm:mb-6 md:mb-8"
+          className="mb-4 sm:mb-6 md:mb-8 mt-8 sm:mt-12 md:mt-16 lg:mt-20"
         >
           <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-gradient-to-br from-pink-400 to-purple-500 rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-xl sm:shadow-2xl mx-auto">
-            <PawPrint className="text-white" size={24} sm={32} md={40} strokeWidth={2} />
+            <PawPrint className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-white" strokeWidth={2} />
           </div>
         </motion.div>
 
@@ -100,14 +100,14 @@ const LandingPage = ({ onStartApp }) => {
         >
           <div className="text-center">
             <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-              <Heart className="text-pink-500" size={16} sm={20} md={24} strokeWidth={2} />
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-pink-500" strokeWidth={2} />
             </div>
             <h3 className="font-semibold text-gray-800 text-xs sm:text-sm md:text-base mb-1">Like</h3>
             <p className="text-xs sm:text-sm text-gray-500">Show your love</p>
           </div>
           <div className="text-center">
             <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-              <PawPrint className="text-purple-500" size={16} sm={20} md={24} strokeWidth={2} />
+              <PawPrint className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-purple-500" strokeWidth={2} />
             </div>
             <h3 className="font-semibold text-gray-800 text-xs sm:text-sm md:text-base mb-1">Find Matches</h3>
             <p className="text-xs sm:text-sm text-gray-500">Your perfect pet</p>
