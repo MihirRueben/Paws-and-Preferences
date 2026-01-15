@@ -1,5 +1,7 @@
 //this file is the service layer for the cat images API
 
+const catNames = ['Whiskers', 'Mittens', 'Shadow', 'Luna', 'Bella', 'Charlie', 'Max', 'Lucy', 'Oliver', 'Sophie', 'Tiger', 'Nala', 'Simba', 'Cleo', 'Leo'];
+
 export const fetchCats = async (limit = 15) => {
     try {
         const response = await fetch(`https://cataas.com/api/cats?limit=${limit}&t=${Date.now()}`);
@@ -8,13 +10,16 @@ export const fetchCats = async (limit = 15) => {
         console.log("RAW DATA FROM API:", data[0]);
 
         //mapping the raw data to a cleaner format for the app
-        return data.map((cat) => ({
+        return data.map((cat, index) => ({
             id: cat.id,
             url: `https://cataas.com/cat/${cat.id}`,
+            name: catNames[index % catNames.length],
+            age: Math.floor(Math.random() * 10) + 1, // Random age 1-10
         }));
     } catch (error){
         console.error("Error while fetching data:", error);
         return [];
+
     }
 
 };

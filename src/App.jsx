@@ -44,11 +44,11 @@ function App() {
     getCats();
   };
 
-  if (loading) return <div className="flex h-screen items-center justify-center">Loading Cats...</div>;
+  if (loading) return <div className="flex h-screen items-center justify-center bg-white text-gray-600">Loading Cats...</div>;
 
   return (
-  <div className="min-h-screen bg-neutral-900 flex flex-col items-center justify-center p-4 overflow-hidden">
-    <h1 className="text-4xl font-black mb-8 text-pink-500 tracking-tighter">
+  <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 overflow-hidden">
+    <h1 className="text-4xl font-black mb-8 text-gray-800 tracking-tighter">
       Paws & Preference
     </h1>
     
