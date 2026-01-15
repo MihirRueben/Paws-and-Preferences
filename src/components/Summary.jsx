@@ -2,7 +2,7 @@
 
 const Summary = ({ likedCats, total, onStartOver, onGoToLanding }) => {
   return (
-    <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md text-center animate-in fade-in zoom-in duration-300 border border-gray-100">
+    <div className="bg-white p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl sm:rounded-3xl shadow-lg w-full max-w-none sm:max-w-md md:max-w-lg lg:max-w-xl text-center animate-in fade-in zoom-in duration-300 border border-gray-100">
       <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-gray-800 mb-2">That's All!</h2>
       <p className="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6 font-medium">
         You liked {likedCats.length} out of {total} kitties.

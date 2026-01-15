@@ -83,13 +83,13 @@ function App() {
   );
 
   return (
-  <div className="h-screen w-screen bg-white flex flex-col overflow-hidden">
-    <div className="flex flex-col items-center flex-1 w-full px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 md:mb-8 text-gray-800 tracking-tighter text-center">
-        Paws & Preference
-      </h1>
-      
-      <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg flex-1 flex items-center justify-center">
+    <div className="h-screen w-screen bg-white flex flex-col overflow-hidden">
+      <div className="flex flex-col items-center flex-1 w-full px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 sm:mb-6 md:mb-8 text-gray-800 tracking-tighter text-center">
+          Paws & Preference
+        </h1>
+        
+        <div className="relative w-full h-full max-w-none sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl flex-1 flex items-center justify-center">
           {/* Check if we still have cats left to show */}
           {currentIndex < cats.length ? (
             // Render the stack. We slice the array to only show the CURRENT cat 
