@@ -1,8 +1,11 @@
 // Cat card frame with motion tailwind
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { Heart, X } from 'lucide-react';
+import ImageSkeleton from './ImageSkeleton';
+import { useState } from 'react';
 
 const CatCard = ({ cat, onSwipe, isTopCard }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -52,11 +55,16 @@ const CatCard = ({ cat, onSwipe, isTopCard }) => {
       className="relative w-full h-full bg-zinc-100 rounded-2xl sm:rounded-[2.5rem] shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing touch-none ring-1 ring-black/5"
     >
       {/* Main Image */}
+      {!imageLoaded && <ImageSkeleton />}
       <img
         src={cat.url}
         alt="Cute Kitten"
-        className="w-full h-full object-cover select-none"
+        className={`w-full h-full object-cover select-none transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0 absolute inset-0'}`}
         draggable="false"
+        loading={isTopCard ? "eager" : "lazy"}
+        decoding="async"
+        onLoad={() => setImageLoaded(true)}
+        style={{ imageRendering: 'auto' }}
       />
 
       {/* Visible Action Buttons */}
@@ -89,10 +97,10 @@ const CatCard = ({ cat, onSwipe, isTopCard }) => {
       {/* Ultra-Minimalist Info Section */}
       <div className="absolute bottom-20 sm:bottom-24 md:bottom-28 left-0 right-0 p-4 sm:p-6 md:p-8 lg:p-10 pointer-events-none">
         <div className="text-white">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
-            {cat.name} <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light opacity-80">{cat.age}</span>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0px 0px 8px rgba(0,0,0,0.5)' }}>
+            {cat.name} <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light opacity-90">{cat.age}</span>
           </h2>
-          <p className="text-xs sm:text-sm md:text-base font-medium opacity-70 mt-1 uppercase tracking-widest">
+          <p className="text-xs sm:text-sm md:text-base font-medium opacity-90 mt-1 uppercase tracking-widest" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
             Purrfect Match
           </p>
         </div>

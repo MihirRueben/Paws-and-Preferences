@@ -3,7 +3,7 @@ import { Heart, PawPrint } from 'lucide-react';
 
 const LandingPage = ({ onStartApp }) => {
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8 overflow-hidden">
+    <div className="h-screen w-screen bg-white flex flex-col items-center justify-center p-3 sm:p-4 md:p-6 lg:p-8 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
