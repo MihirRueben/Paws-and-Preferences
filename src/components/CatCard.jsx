@@ -68,31 +68,32 @@ const CatCard = ({ cat, onSwipe, isTopCard }) => {
       />
 
       {/* Visible Action Buttons */}
-      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-0 right-0 flex justify-center gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-8">
-        {/* Dislike Button */}
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => handleButtonClick('left')}
-          disabled={!isTopCard}
-          style={{ backgroundColor: '#ef4444' }}
-          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 hover:bg-red-600 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          <X size={20} sm={24} md={28} strokeWidth={3} />
-        </motion.button>
-        
-        {/* Like Button */}
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => handleButtonClick('right')}
-          disabled={!isTopCard}
-          style={{ backgroundColor: '#22c55e' }}
-          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 hover:bg-green-600 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          <Heart size={20} sm={24} md={28} strokeWidth={3} fill="currentColor" />
-        </motion.button>
-      </div>
+        <div className="absolute bottom-6 sm:bottom-10 left-0 right-0 flex justify-center gap-6 sm:gap-8 px-4">
+          {/* Dislike Button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => handleButtonClick('left')}
+            disabled={!isTopCard}
+            style={{ backgroundColor: '#ef4444' }}
+            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 hover:bg-red-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-200 disabled:opacity-50"
+          >
+            {/* Increased icon size from w-6 to w-8 */}
+            <X className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={3.5} />
+          </motion.button>
+          
+          {/* Like Button */}
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => handleButtonClick('right')}
+            disabled={!isTopCard}
+            style={{ backgroundColor: '#22c55e' }}
+            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 hover:bg-green-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-200 disabled:opacity-50"
+          >
+            <Heart className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" strokeWidth={3.5} fill="currentColor" />
+          </motion.button>
+        </div>
 
       {/* Ultra-Minimalist Info Section */}
       <div className="absolute bottom-20 sm:bottom-24 md:bottom-28 left-0 right-0 p-4 sm:p-6 md:p-8 lg:p-10 pointer-events-none">

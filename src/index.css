@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Ensure Lucide icons respect responsive sizing */
+svg.lucide {
+  width: inherit !important;
+  height: inherit !important;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
